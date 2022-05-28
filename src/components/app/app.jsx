@@ -10,9 +10,21 @@ const ContainerApp = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 20px;
+  .title {
+    text-align: center;
+    padding-top: .5rem;
+    color: #fff;
+    font-size: 1rem;
+  }
   .display {
+    display: flex;
     height: 180px;
     max-width: 320px;
+    color: #fff;
+    font-size: 3.5rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem 2rem;
   }
   .keypad {
     height: 440px;
@@ -38,7 +50,12 @@ const ContainerApp = styled.div`
     background: none;
     color: #fff;
     width: 5rem;
-    height: 5.5rem;
+    height: 5.4rem;
+    text-align: center;
+    transition: all 300ms ease;
+    &:hover {
+      background: #0C263B;
+    }
   }
   .key-blue {
     color: #3498d8;
@@ -49,11 +66,17 @@ const ContainerApp = styled.div`
   }
   .key-0 {
     width: 10rem;
+    border-radius: 0 0 0 20px;
+  }
+  .key-equal {
+    border-radius: 0 0 20px 0;
+
   }
 `
 export default function App () {
   return (
     <ContainerApp>
+      <h3 className="title">Calculator</h3>
       <div className="display">0</div>
       <div className="keypad">
         <div className="digit-key">
