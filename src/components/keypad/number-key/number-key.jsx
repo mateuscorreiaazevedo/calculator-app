@@ -1,15 +1,9 @@
-import { useState } from 'react'
 import { Button } from '../../ui/button/button'
 import { NumberKeyStyled } from './number-key.styled'
 
-export const NumberKey = () => {
-  const [num, setNum] = useState()
+export const NumberKey = (props) => {
+  const { handleClick } = props
 
-  const handleClick = (e) => {
-    const { value } = e.target
-    setNum(Number(value))
-  }
-  console.log(num)
   return (
         <NumberKeyStyled>
             <Button className="key-0" text='0' value='0' onClick={handleClick}/>
