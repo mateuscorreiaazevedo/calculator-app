@@ -1,13 +1,12 @@
-import KeyPad from '../keypad/keypad'
-import { Display } from '../ui/display/display'
+import Calculator from '../calculator/calculator'
 import { ContainerApp } from './app.styled'
 
 export default function App () {
   return (
     <ContainerApp>
       <h3 className="title">Calculator</h3>
-      <Display />
-      <KeyPad />
+      <Calculator/>
+      <p className='copyright'>By: Mateus Azevedo</p>
     </ContainerApp>
   )
 }

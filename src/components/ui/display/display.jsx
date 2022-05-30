@@ -1,5 +1,11 @@
-import { DisplayStyled } from "./display.styled"
+import { DisplayStyled } from './display.styled'
 
-export const Display = () => {
-  return <DisplayStyled>0</DisplayStyled>
+export const Display = ({ screen }) => {
+  return (
+    <DisplayStyled>
+      {screen && (
+        screen
+      )}
+    </DisplayStyled>
+  )
 }
