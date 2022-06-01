@@ -68,7 +68,7 @@ export default function Calculator () {
         result = previousValue - currentValue
         break
     }
-    setNum((result).toString())
+    setNum((result.toFixed(5)).toString())
   }
 
   return (

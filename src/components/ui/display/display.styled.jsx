@@ -9,4 +9,5 @@ export const DisplayStyled = styled.div`
     justify-content: flex-end;
     align-items: flex-end;
     padding: 1rem 2rem;
+    
 `
