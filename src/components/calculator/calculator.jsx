@@ -17,12 +17,14 @@ export default function Calculator () {
 
   function clickNumber (e) {
     const { value } = e.target
-
-    setNum(clickedOperator ? value : num + value)
-
-    if (clickedOperator) {
-      setOldNum(num)
-      setClickedOperator(false)
+    if (num.length <= 15) {
+      setNum(clickedOperator ? value : num + value)
+      if (clickedOperator) {
+        setOldNum(num)
+        setClickedOperator(false)
+      }
+    } else {
+      alert('Número máximo de caractéres atingido')
     }
   }
 
@@ -68,7 +70,7 @@ export default function Calculator () {
         result = previousValue - currentValue
         break
     }
-    setNum((result.toFixed(5)).toString())
+    setNum((result).toString())
   }
 
   return (

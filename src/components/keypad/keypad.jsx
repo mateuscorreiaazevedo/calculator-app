@@ -10,6 +10,13 @@ export default function KeyPad (props) {
     clickEquals,
     clickOperator
   } = props
+
+  const toEnter = (e) => {
+    if (e.code === 'Enter') {
+      clickOperator()
+    }
+  }
+
   return (
         <KeyPadStyled>
             <DigitKey>
@@ -37,7 +44,7 @@ export default function KeyPad (props) {
               <Button className="key-multiply key-blue" text='×' value='*' onClick={clickOperator}/>
               <Button className="key-sum key-blue" text='+' value='+' onClick={clickOperator}/>
               <Button className="key-sub key-blue" text='-' value='-' onClick={clickOperator}/>
-              <Button className="key-equal key-blue" text='=' onClick={clickEquals}/>
+              <Button className="key-equal key-blue" text='=' onClick={clickEquals} onKeyUp={toEnter} />
             </OperatorKey>
         </KeyPadStyled>
   )
