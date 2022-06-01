@@ -106,7 +106,8 @@ Error generating stack: `+o.message+`
     justify-content: flex-end;
     align-items: flex-end;
     padding: 1rem 2rem;
-`,Sm=({screen:e})=>X(km,{children:e&&e});function xm(){const[e,t]=Je.exports.useState(""),[n,r]=Je.exports.useState(""),[l,o]=Je.exports.useState(""),[i,u]=Je.exports.useState(!1);function s(){return{currentValue:Number(e),previousValue:Number(n)}}function c(k){const{value:_}=k.target;t(i?_:e+_),i&&(r(e),u(!1))}function m(){t(""),r(""),o("")}function y(){t(e*-1)}function p(k){const{currentValue:_,previousValue:f}=s(),a=f*_/100,d=l==="-"?f-a:f+a;t(d.toString())}function S(k){const{value:_}=k.target;u(!0),o(_)}function v(){let k;const{currentValue:_,previousValue:f}=s();switch(l){case"/":k=f/_;break;case"*":k=f*_;break;case"+":k=f+_;break;case"-":k=f-_;break}t(k.toString())}return qt("div",{children:[X(Sm,{screen:e}),X(wm,{clickNumber:c,clickInvert:y,clickReset:m,clickPercent:p,clickEquals:v,clickOperator:S})]})}const Cm=Xt.div`
+    
+`,Sm=({screen:e})=>X(km,{children:e&&e});function xm(){const[e,t]=Je.exports.useState(""),[n,r]=Je.exports.useState(""),[l,o]=Je.exports.useState(""),[i,u]=Je.exports.useState(!1);function s(){return{currentValue:Number(e),previousValue:Number(n)}}function c(k){const{value:_}=k.target;t(i?_:e+_),i&&(r(e),u(!1))}function m(){t(""),r(""),o("")}function y(){t(e*-1)}function p(k){const{currentValue:_,previousValue:f}=s(),a=f*_/100,d=l==="-"?f-a:f+a;t(d.toString())}function S(k){const{value:_}=k.target;u(!0),o(_)}function v(){let k;const{currentValue:_,previousValue:f}=s();switch(l){case"/":k=f/_;break;case"*":k=f*_;break;case"+":k=f+_;break;case"-":k=f-_;break}t(k.toFixed(5).toString())}return qt("div",{children:[X(Sm,{screen:e}),X(wm,{clickNumber:c,clickInvert:y,clickReset:m,clickPercent:p,clickEquals:v,clickOperator:S})]})}const Cm=Xt.div`
   background-color: #0C263B;
   margin: 0 auto;
   width: 320px;
